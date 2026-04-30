@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Tri Akses Nusantara - Web Hosting dan Domain</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Web hosting murah, domain Indonesia, hosting cepat, layanan domain terpercaya." name="keywords">
+    <meta content="Solusi lengkap web hosting dan pendaftaran domain untuk website impian Anda bersama Tri Akses Nusantara." name="description">
+    <link href="../img/favicon.png" rel="icon">
+    <link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+        #product-detail-hero {
+            /* Perbaikan Jalur */
+            background-image: url(../img/hosting-domain.jpg); /* <--- PATH GAMBAR ANDA SEKARANG BENAR DI SINI */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 120px 0;
+            color: #fff;
+            text-align: center;
+            min-height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        #product-detail-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        #product-detail-hero .hero-container {
+            position: relative;
+            z-index: 2;
+        }
+        #product-detail-hero h1 {
+            font-size: 52px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+        #product-detail-hero h2 {
+            font-size: 26px;
+            font-weight: 300;
+            margin-bottom: 0;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* DESAIN KONTEN UNTUK WEB HOSTING (sedikit variasi) */
+        #product-content {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+        #product-content h2 {
+            font-size: 38px;
+            color: #3a5a81;
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 600;
+        }
+        #product-content p {
+            font-size: 17px;
+            line-height: 1.9;
+            color: #555;
+            margin-bottom: 25px;
+        }
+        #product-content ul {
+            list-style: none;
+            padding: 0;
+            margin-left: 0;
+            margin-bottom: 30px;
+        }
+        #product-content ul li {
+            font-size: 17px;
+            color: #555;
+            line-height: 2;
+            padding-left: 25px;
+            position: relative;
+        }
+        #product-content ul li::before {
+            content: "\f1c0"; /* FontAwesome database icon untuk hosting */
+            font-family: FontAwesome;
+            position: absolute;
+            left: 0;
+            color: #008cba;
+            font-size: 18px;
+            top: 2px;
+        }
+
+        /* KOTAK FITUR UTAMA UNTUK HOSTING */
+        .features-box {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+            margin-top: 30px;
+        }
+        .features-box h3 {
+            font-size: 24px;
+            color: #008cba;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .features-box ul li {
+            font-size: 16px;
+            line-height: 1.8;
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .features-box ul li::before {
+            content: "\f058"; /* Tetap pakai check-circle */
+            font-family: FontAwesome;
+            position: absolute;
+            left: 0;
+            color: #008cba;
+            font-size: 16px;
+            top: 0;
+        }
+
+        /* Tombol Kembali */
+        .back-link-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .back-to-services {
+            display: inline-block;
+            padding: 14px 35px;
+            background-color: #008cba;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 17px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 140, 186, 0.3);
+        }
+        .back-to-services:hover {
+            background-color: #005f75;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 140, 186, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div id="logo" class="pull-left">
+                <a href="../index.html#hero"><img src="../img/logo.png" alt="Tri Akses Nusantara Logo" title="" /></a>
+            </div>
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li><a href="../index.html#hero">Home</a></li>
+                    <li><a href="../index.html#about">About Us</a></li>
+                    <li class="menu-active"><a href="../index.html#services">Services</a></li>
+                    <li><a href="../index.html#portfolio">Portfolio</a></li>
+                    <li><a href="../index.html#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section id="product-detail-hero">
+            <div class="hero-container">
+                <h1 class="wow fadeInDown">Web Hosting dan Domain</h1>
+                <h2 class="wow fadeInUp" data-wow-delay="0.2s">Solusi Lengkap Kehadiran Online Anda</h2>
+            </div>
+        </section>
+        <section id="product-content">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <h2 class="wow fadeInUp">Tentang Web Hosting dan Domain</h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s"><strong>Web Hosting</strong> adalah layanan penyimpanan data dan file (seperti gambar, teks, kode, database) yang membentuk sebuah website, agar website tersebut dapat diakses secara online oleh siapa saja di seluruh dunia. Tanpa hosting, website Anda hanya bisa diakses di komputer Anda sendiri.</p>
+
+                        <p class="wow fadeInUp" data-wow-delay="0.4s"><strong>Domain</strong> adalah alamat unik website Anda di internet, seperti `www.triakses.com` atau `www.google.com`. Domain berfungsi sebagai identitas digital yang mudah diingat, menggantikan alamat IP yang sulit dihafal. Tanpa domain, pengunjung harus mengetik deretan angka (alamat IP) untuk mengakses website Anda.</p>
+
+                        <p class="wow fadeInUp" data-wow-delay="0.6s">Tri Akses Nusantara menyediakan solusi terpadu untuk kebutuhan Web Hosting dan Pendaftaran Domain Anda. Kami menawarkan infrastruktur server yang handal, cepat, dan aman, serta berbagai pilihan nama domain yang bisa Anda daftarkan. Dengan layanan kami, Anda dapat dengan mudah mewujudkan website impian Anda, mulai dari blog pribadi, portofolio online, toko e-commerce, hingga website korporat.</p>
+
+                        <h3 class="wow fadeInUp" data-wow-delay="0.8s">Mengapa Memilih Hosting dan Domain dari Kami?</h3>
+                        <ul class="wow fadeInUp" data-wow-delay="1s">
+                            <li><strong>Paket Lengkap:</strong> Kami menyediakan layanan hosting dan domain dalam satu atap, memudahkan pengelolaan.</li>
+                            <li><strong>Performa Optimal:</strong> Server berteknologi SSD/NVMe menjamin kecepatan loading website yang superior.</li>
+                            <li><strong>Uptime Tinggi:</strong> Jaminan website Anda online hampir 24/7.</li>
+                            <li><strong>Keamanan Terjamin:</strong> Dilengkapi dengan Sertifikat SSL Gratis, proteksi DDoS, dan backup data otomatis.</li>
+                            <li><strong>Dukungan Teknis 24/7:</strong> Tim ahli kami selalu siap membantu mengatasi masalah Anda.</li>
+                            <li><strong>Panel Kontrol Mudah:</strong> Antarmuka intuitif untuk pengelolaan website dan domain Anda.</li>
+                            <li><strong>Harga Terjangkau:</strong> Kualitas terbaik dengan harga kompetitif untuk berbagai skala kebutuhan.</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 offset-lg-1">
+                        <div class="features-box wow fadeInRight" data-wow-delay="1.2s">
+                            <h3>Fitur Utama Web Hosting & Domain</h3>
+                            <ul>
+                                <li>Pendaftaran Domain TLD & ccTLD</li>
+                                <li>Pilihan Lokasi Server (Global/Lokal)</li>
+                                <li>Unlimited Bandwidth (Tergantung Paket)</li>
+                                <li>Space Penyimpanan SSD/NVMe</li>
+                                <li>Sertifikat SSL Gratis (HTTPS)</li>
+                                <li>Email Hosting Profesional</li>
+                                <li>One-Click Installer (WordPress, Joomla, dll.)</li>
+                                <li>Backup Data Harian Otomatis</li>
+                                <li>Proteksi Imunify360 (Keamanan Lanjutan)</li>
+                            </ul>
+                            <div class="text-center wow fadeInUp" data-wow-delay="1.4s" style="margin-top: 30px;">
+                                <a href="../index.html#contact" class="back-to-services" style="background-color: #00a7d0; box-shadow: 0 5px 15px rgba(0, 167, 208, 0.3);">Pilih Paket Hosting Anda</a>
+                            </div>
+                            <h3 class="wow fadeInUp" data-wow-delay="1.6s" style="margin-top: 40px; font-size: 20px;">Punya Pertanyaan?</h3>
+                            <p class="wow fadeInUp" data-wow-delay="1.8s" style="font-size: 16px; color: #666;">Hubungi tim support kami untuk konsultasi gratis mengenai kebutuhan hosting dan domain Anda.</p>
+                            <div class="text-center wow fadeInUp" data-wow-delay="2s">
+                                <a href="https://wa.me/+6285198085258" target="_blank" class="back-to-services" style="background-color: #25d366; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);">Hubungi via WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back-link-container wow fadeInUp" data-wow-delay="2.2s">
+                    <a href="../index.html#services" class="back-to-services">Kembali ke Produk Lain</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+            </div>
+        </div>
+
+    <div class="container">
+      <div class="copyright">© 2025 <strong url="#">TRI AKSES NUSANTARA</strong>
+      </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/jquery/jquery-migrate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/counterup/counterup.min.js"></script>
+    <script src="../lib/superfish/hoverIntent.js"></script>
+    <script src="../lib/superfish/superfish.min.js"></script>
+    <script src="../contactform/contactform.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <title>Tri Akses Nusantara - Internet SOHO</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Internet SOHO, koneksi internet bisnis kecil, internet rumah, kecepatan stabil, wifi kantor." name="keywords">
+    <meta content="Dapatkan koneksi internet stabil dan terjangkau untuk kebutuhan Small Office Home Office Anda dengan Tri Akses Nusantara." name="description">
+    <link href="../img/favicon.png" rel="icon">
+    <link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+        /* Hero Section for SOHO Product */
+        #soho-hero {
+            /* Perbaikan Jalur */
+            background-image: url(../img/small-office.webp); /* Pastikan gambar ini ada di folder img Anda */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 130px 0; /* Sedikit lebih kecil dari dedicated */
+            color: #fff;
+            text-align: center;
+            min-height: 420px; /* Tinggi minimum yang sedikit berbeda */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        #soho-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Overlay sedikit lebih terang */
+            z-index: 1;
+        }
+        #soho-hero .hero-container {
+            position: relative;
+            z-index: 2;
+        }
+        #soho-hero h1 {
+            font-size: 58px; /* Ukuran sedikit berbeda */
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+        }
+        #soho-hero h2 {
+            font-size: 28px; /* Ukuran sedikit berbeda */
+            font-weight: 400; /* Font weight sedikit lebih tebal */
+            margin-bottom: 0;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        /* Product Content Section for SOHO */
+        #soho-content {
+            padding: 70px 0; /* Padding sedikit berbeda */
+            background-color: #eef7fc; /* Warna latar belakang yang lebih cerah */
+        }
+        #soho-content h2 {
+            font-size: 40px;
+            color: #0d47a1; /* Warna judul yang lebih biru */
+            margin-bottom: 35px;
+            text-align: center;
+            font-weight: 600;
+        }
+        #soho-content p {
+            font-size: 16px; /* Ukuran font sedikit lebih kecil */
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        #soho-content ul {
+            list-style: none;
+            padding: 0;
+            margin-left: 0;
+            margin-bottom: 25px;
+        }
+        #soho-content ul li {
+            font-size: 16px; /* Ukuran font sedikit lebih kecil */
+            color: #555;
+            line-height: 2;
+            padding-left: 28px; /* Padding sedikit berbeda */
+            position: relative;
+        }
+        #soho-content ul li::before {
+            content: "\f00c"; /* FontAwesome check icon */
+            font-family: FontAwesome;
+            position: absolute;
+            left: 0;
+            color: #17a2b8; /* Warna biru muda untuk ikon check */
+            font-size: 16px;
+            top: 2px;
+        }
+
+        /* Features Box for SOHO (using a lighter, friendlier style) */
+        .soho-features-box {
+            background-color: #ffffff;
+            border: 1px solid #d0e8f7; /* Warna border lebih cerah */
+            padding: 25px; /* Padding sedikit lebih kecil */
+            border-radius: 10px; /* Sudut membulat sedikit lebih besar */
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05); /* Bayangan lebih ringan */
+            margin-top: 25px;
+            transition: all 0.3s ease; /* Tambah transisi */
+        }
+        .soho-features-box:hover {
+            transform: translateY(-5px); /* Efek naik lebih terasa saat hover */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Bayangan lebih kuat saat hover */
+        }
+        .soho-features-box h3 {
+            font-size: 22px;
+            color: #0d47a1; /* Warna judul yang sama dengan judul section */
+            margin-bottom: 18px;
+            text-align: center;
+            font-weight: 600;
+        }
+        .soho-features-box ul li {
+            font-size: 15px; /* Ukuran font lebih kecil */
+            line-height: 1.7;
+            padding-left: 22px; /* Padding sedikit berbeda */
+            position: relative;
+            margin-bottom: 8px;
+        }
+        .soho-features-box ul li::before {
+            content: "\f067"; /* FontAwesome plus icon for a fresh feel */
+            font-family: FontAwesome;
+            position: absolute;
+            left: 0;
+            color: #17a2b8; /* Warna biru muda untuk ikon */
+            font-size: 15px;
+            top: 1px;
+        }
+
+        /* Call to Action Button for SOHO */
+        .soho-cta-button {
+            display: inline-block;
+            padding: 12px 30px; /* Padding sedikit lebih kecil */
+            background-color: #28a745; /* Warna hijau untuk kesan "mudah/ekonomis" */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+            margin-top: 25px;
+        }
+        .soho-cta-button:hover {
+            background-color: #218838;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(40, 167, 69, 0.4);
+        }
+
+        /* Back Link for SOHO */
+        .soho-back-link-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .soho-back-to-services {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #6c757d; /* Warna abu-abu netral */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(108, 117, 125, 0.3);
+        }
+        .soho-back-to-services:hover {
+            background-color: #5a6268;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(108, 117, 125, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div id="logo" class="pull-left">
+                <a href="../index.html#hero"><img src="../img/logo.png" alt="Tri Akses Nusantara Logo" title="" /></a>
+            </div>
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li><a href="../index.html#hero">Home</a></li>
+                    <li><a href="../index.html#about">About Us</a></li>
+                    <li class="menu-active"><a href="../index.html#services">Services</a></li>
+                    <li><a href="../index.html#portfolio">Portfolio</a></li>
+                    <li><a href="../index.html#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section id="soho-hero">
+            <div class="hero-container">
+                <h1 class="wow fadeInDown">Internet SOHO</h1>
+                <h2 class="wow fadeInUp" data-wow-delay="0.2s">Koneksi Internet Andal untuk Bisnis Kecil dan Rumahan Anda</h2>
+            </div>
+        </section>
+
+        <section id="soho-content">
+            <div class="container">
+                <h2 class="wow fadeInUp">Internet Cepat dan Stabil untuk Produktivitas Maksimal</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">Produk <b>Internet SOHO (Small Office Home Office)</b> dari Tri Akses Nusantara dirancang khusus untuk memenuhi kebutuhan konektivitas internet bisnis skala kecil, startup, pekerja lepas, atau kantor rumahan. Kami memahami bahwa bahkan bisnis kecil membutuhkan koneksi yang <b>andal, cepat, dan terjangkau</b> untuk mendukung operasional sehari-hari.</p>
+
+                        <p class="wow fadeInUp" data-wow-delay="0.4s">Berbeda dengan layanan internet residensial biasa, Internet SOHO kami menawarkan stabilitas dan prioritas jaringan yang lebih baik, memastikan aktivitas bisnis Anda tidak terganggu. Layanan ini sangat cocok untuk:</p>
+                        <ul class="wow fadeInUp" data-wow-delay="0.6s">
+                            <li>Kantor startup dengan tim kecil</li>
+                            <li>Pekerja jarak jauh dan *freelancer*</li>
+                            <li>Usaha mikro, kecil, dan menengah (UMKM)</li>
+                            <li>Toko online dan bisnis *e-commerce*</li>
+                            <li>Kebutuhan pembelajaran daring dan *work from home*</li>
+                        </ul>
+                        <p class="wow fadeInUp" data-wow-delay="0.8s">Dengan berbagai pilihan paket kecepatan, Internet SOHO Tri Akses Nusantara memberikan fleksibilitas untuk memilih bandwidth sesuai dengan skala dan anggaran bisnis Anda. Nikmati internet tanpa batas yang mendukung *video conference*, penggunaan aplikasi *cloud*, *Browse* cepat, dan komunikasi lancar dengan pelanggan.</p>
+                    </div>
+
+                    <div class="col-lg-4 offset-lg-1">
+                        <div class="soho-features-box wow fadeInRight" data-wow-delay="1s">
+                            <h3>Keunggulan Internet SOHO Kami:</h3>
+                            <ul>
+                                <li>Kecepatan Stabil & Prioritas Jaringan</li>
+                                <li>Harga Terjangkau untuk Bisnis Kecil</li>
+                                <li>Dukungan Teknis Cepat Tanggap</li>
+                                <li>Fleksibilitas Pilihan Bandwidth</li>
+                                <li>Sesuai untuk Berbagai Aplikasi Bisnis</li>
+                                <li>Instalasi Mudah & Cepat</li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="../index.html#contact" class="soho-cta-button wow fadeIn" data-wow-delay="1.2s">Dapatkan Penawaran SOHO Terbaik</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="soho-back-link-container wow fadeInUp" data-wow-delay="1.4s">
+                    <a href="../index.html#services" class="soho-back-to-services">Kembali ke Produk Lain</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+            </div>
+        </div>
+
+       <div class="container">
+      <div class="copyright">© 2025 <strong url="#">TRI AKSES NUSANTARA</strong>
+      </div>
+        </div>
+    </footer>
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/jquery/jquery-migrate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/counterup/counterup.min.js"></script>
+    <script src="../lib/superfish/hoverIntent.js"></script>
+    <script src="../lib/superfish/superfish.min.js"></script>
+    <script src="../contactform/contactform.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        // Inisialisasi WOW.js setelah semua script eksternal dimuat
+        $(document).ready(function() {
+            new WOW().init();
+        });
+    </script>
+
+</body>
+</html>

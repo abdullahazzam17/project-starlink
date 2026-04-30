@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Center | NexGen FAQ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .faq-page { padding: 150px 15% 100px; background: #050505; }
+        .faq-header { text-align: center; margin-bottom: 60px; }
+        
+        .faq-wrapper { max-width: 800px; margin: 0 auto; }
+        
+        /* Item FAQ Tanpa Class Reveal Biar Gak Bentrok */
+        .faq-item { 
+            background: rgba(255, 255, 255, 0.03); 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+            margin-bottom: 15px; 
+            border-radius: 15px; 
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .faq-question { 
+            padding: 20px 30px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .faq-question h3 { font-size: 1.1rem; color: #fff; margin: 0; }
+        .status-icon { transition: 0.3s; color: var(--accent); }
+
+        /* JAWABAN: Pake Height 0 & Visibility Hidden */
+        .faq-answer { 
+            max-height: 0;
+            opacity: 0;
+            visibility: hidden;
+            padding: 0 30px;
+            color: #aaa;
+            line-height: 1.6;
+            transition: all 0.4s ease;
+        }
+
+        /* SAAT AKTIF */
+        .faq-item.active { border-color: var(--accent); background: rgba(125, 90, 255, 0.05); }
+        .faq-item.active .faq-answer { 
+            max-height: 200px; /* Sesuaikan dengan panjang teks */
+            opacity: 1;
+            visibility: visible;
+            padding: 0 30px 25px 30px;
+        }
+        .faq-item.active .status-icon { transform: rotate(180deg); }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo-link"><div class="logo">NEX<span>GEN</span></div></a>
+        <ul class="nav-links"><li><a href="index.html">Back to Home</a></li></ul>
+    </nav>
+
+    <section class="faq-page">
+        <div class="faq-header reveal">
+            <h1>Got <span>Questions?</span></h1>
+            <p>Klik pada pertanyaan untuk melihat jawaban.</p>
+        </div>
+
+        <div class="faq-wrapper reveal">
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3><i class="fa-solid fa-clock"></i> Berapa lama pengerjaan proyek?</h3>
+            <i class="fa-solid fa-chevron-down status-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>Timeline pengerjaan bervariasi mulai dari 4 minggu hingga 12 minggu tergantung kompleksitas sistem dan fitur yang diminta.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3><i class="fa-solid fa-shield-halved"></i> Apakah ada garansi keamanan data?</h3>
+            <i class="fa-solid fa-chevron-down status-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>Tentu. Semua infrastruktur yang kami bangun menggunakan enkripsi tingkat militer dan audit keamanan rutin untuk mencegah celah keamanan.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3><i class="fa-solid fa-hand-holding-dollar"></i> Bagaimana sistem pembayarannya?</h3>
+            <i class="fa-solid fa-chevron-down status-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>Kami menggunakan sistem termin yang fleksibel: Down Payment untuk memulai, diikuti pembayaran berdasarkan milestone yang telah disepakati.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3><i class="fa-solid fa-headset"></i> Apakah dapat support setelah rilis?</h3>
+            <i class="fa-solid fa-chevron-down status-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>NexGen menyediakan paket maintenance khusus untuk memastikan sistem Anda tetap berjalan optimal 24/7 dan selalu up-to-date.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3><i class="fa-solid fa-code-merge"></i> Bisakah saya meminta fitur kustom?</h3>
+            <i class="fa-solid fa-chevron-down status-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>Sangat bisa. Kami fokus pada solusi Enterprise yang sepenuhnya kustom sesuai dengan alur bisnis unik perusahaan Anda.</p>
+        </div>
+    </div>
+</div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Apakah ada garansi keamanan?</h3>
+                    <i class="fa-solid fa-chevron-down status-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Ya, kami mengimplementasikan enkripsi tingkat tinggi dan audit keamanan rutin pada setiap proyek.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col branding">
+            <div class="footer-logo">NEX<span>GEN</span></div>
+            <p>Solusi teknologi masa depan untuk pertumbuhan bisnis global Anda.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h3>Kantor Kami</h3>
+            <p>M-TEN BUILDING 11 FLOOR —<br>
+               Kuningan Barat Mampang Prapatan<br>
+               Jakarta Selatan, DKI Jakarta</p>
+            <a href="mailto:info@nexgen.co.id" class="footer-email">your.email@example.com</a>
+            <p class="footer-phone">+123456789</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="services.html">Penawaran Spesial</a></li>
+                <li><a href="portofolio.html">Portofolio</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>Dapatkan update terbaru dari kami.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn-subscribe">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+    <div class="bottom-left">
+        <p>NexGen Global Solusi &copy; 2026. All rights reserved.</p>
+    </div>
+    <div class="bottom-right">
+        <a href="legal.html#privacy">Privacy Policy</a>
+        <a href="legal.html#terms">Terms of Service</a>
+        <a href="legal.html#cookies">Cookie Policy</a>
+    </div>
+</div>
+
+<a href="https://wa.me/6281138211212" class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="wa-text">Contact us on WhatsApp</span>
+</a>
+</a>
+</footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const questions = document.querySelectorAll('.faq-question');
+            
+            questions.forEach(q => {
+                q.addEventListener('click', (e) => {
+                    const item = q.parentElement;
+                    
+                    // Tutup yang lain
+                    document.querySelectorAll('.faq-item').forEach(other => {
+                        if (other !== item) other.classList.remove('active');
+                    });
+
+                    // Toggle yang diklik
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

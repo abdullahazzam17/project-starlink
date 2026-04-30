@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Center | NexGen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/image/rocket-icon.png?=123">
+    <style>
+    .legal-container { 
+        padding: 120px 15%; 
+        min-height: 80vh; 
+        background: radial-gradient(circle at top right, rgba(125, 90, 255, 0.05), transparent); /* Glow halus */
+    }
+
+    /* Glassmorphism Box */
+    .tab-content { 
+        display: none; 
+        animation: fadeIn 0.5s ease; 
+        background: rgba(255, 255, 255, 0.03); 
+        padding: 40px; 
+        border-radius: 24px; 
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+    }
+
+    .tab-content.active { display: block; }
+
+    /* Judul dengan Ikon */
+    .tab-content h1 { 
+        font-size: 2.5rem; 
+        margin-bottom: 10px; 
+        display: flex; 
+        align-items: center; 
+        gap: 15px; 
+    }
+
+    .tab-content h1 i { color: var(--accent); font-size: 2rem; }
+
+    /* Garis Dekorasi */
+    .legal-divider { 
+        width: 60px; 
+        height: 4px; 
+        background: var(--accent); 
+        margin-bottom: 30px; 
+        border-radius: 10px; 
+    }
+
+    .tab-content p { font-size: 1.1rem; line-height: 1.8; color: #aaa; }
+
+    /* Navigasi Tab */
+    .legal-nav { 
+        display: flex; 
+        gap: 30px; 
+        margin-bottom: 40px; 
+    }
+
+    .legal-nav button { 
+        background: rgba(255,255,255,0.05); 
+        border: 1px solid transparent; 
+        color: #888; 
+        padding: 12px 25px; 
+        border-radius: 50px; 
+        cursor: pointer; 
+        transition: 0.3s; 
+    }
+
+    .legal-nav button.active { 
+        background: var(--accent); 
+        color: white; 
+        box-shadow: 0 10px 20px rgba(125, 90, 255, 0.3); 
+    }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo-link">
+        <div class="logo">NEX<span>GEN</span></div>
+        </a>
+        <ul class="nav-links"><li><a href="index.html">Back to Home</a></li></ul>
+    </nav>
+
+    <div class="legal-container">
+        <div class="legal-nav">
+            <button class="tab-btn active" onclick="openTab(event, 'privacy')">Privacy Policy</button>
+            <button class="tab-btn" onclick="openTab(event, 'terms')">Terms of Service</button>
+            <button class="tab-btn" onclick="openTab(event, 'cookies')">Cookie Policy</button>
+        </div>
+
+        <div id="privacy" class="tab-content active">
+            <h1><i class="fa-solid fa-user-shield"></i> Privacy Policy</h1>
+            <div class="legal-divider"></div> <p>NexGen berkomitmen melindungi data Anda. Kami menggunakan enkripsi tingkat tinggi untuk memastikan informasi proyek dan identitas klien tetap aman dalam ekosistem digital kami.</p>
+        </div>
+
+        <div id="terms" class="tab-content">
+            <h1><i class="fa-solid fa-file-contract"></i> Terms of Service</h1>
+        <div class="legal-divider"></div>
+            <p>Layanan NexGen mencakup pengembangan software, AI, dan keamanan siber. Penggunaan template ini diatur oleh lisensi yang Anda pilih saat pembelian di platform kami.</p>
+    </div>
+
+<div id="cookies" class="tab-content">
+    <h1><i class="fa-solid fa-cookie-bite"></i> Cookie Policy</h1>
+    <div class="legal-divider"></div>
+    <p>Kami menggunakan cookies teknis untuk mengoptimalkan performa rendering pada perangkat M4 dan melacak preferensi bahasa Anda demi pengalaman pengguna yang lebih baik.</p>
+</div>
+
+        <a href="index.html" style="display:inline-block; margin-top:50px; color:var(--accent); text-decoration:none;">← Back to Home</a>
+    </div>
+
+    <footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col branding">
+            <div class="footer-logo">NEX<span>GEN</span></div>
+            <p>Solusi teknologi masa depan untuk pertumbuhan bisnis global Anda.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h3>Kantor Kami</h3>
+            <p>M-TEN BUILDING 11 FLOOR —<br>
+               Kuningan Barat Mampang Prapatan<br>
+               Jakarta Selatan, DKI Jakarta</p>
+            <a href="mailto:info@nexgen.co.id" class="footer-email">your.email@example.com</a>
+            <p class="footer-phone">+123456789</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="services.html">Penawaran Spesial</a></li>
+                <li><a href="portofolio.html">Portofolio</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>Dapatkan update terbaru dari kami.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn-subscribe">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>NexGen Global Solusi &copy; 2026. All rights reserved.</p>
+    </div>
+        <div class="bottom-right">
+        <a href="legal.html#privacy">Privacy Policy</a>
+        <a href="legal.html#terms">Terms of Service</a>
+        <a href="legal.html#cookies">Cookie Policy</a>
+    </div>
+
+    <a href="https://wa.me/6281138211212" class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="wa-text">Contact us on WhatsApp</span>
+</a>
+</footer>
+
+    <script>
+        function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    // Sembunyiin semua konten
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) { 
+        tabcontent[i].classList.remove("active"); 
+    }
+    // Matiin semua status active di button
+    tablinks = document.getElementsByClassName("tab-btn");
+    for (i = 0; i < tablinks.length; i++) { 
+        tablinks[i].classList.remove("active"); 
+    }
+    // Tampilkan tab yang dipilih
+    document.getElementById(tabName).classList.add("active");
+    
+    // Jika diklik manual, kasih class active ke buttonnya
+    if (evt) {
+        evt.currentTarget.classList.add("active");
+    } else {
+        // Jika otomatis dari URL, cari button yang id-nya cocok
+        const targetBtn = Array.from(tablinks).find(btn => btn.getAttribute('onclick').includes(tabName));
+        if (targetBtn) targetBtn.classList.add("active");
+    }
+}
+
+// FUNGSI SAKTI: Cek URL pas halaman beres loading
+window.onload = function() {
+    const hash = window.location.hash.replace('#', ''); // Ambil kata setelah tanda #
+    if (hash) {
+        openTab(null, hash); // Buka tab otomatis sesuai ID di URL
+    }
+};
+    </script>
+</body>
+</html>

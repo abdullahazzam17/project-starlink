@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work | NexGen Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/image/rocket-icon.png?=123">
+    <style>
+        .portfolio-header { padding: 150px 10% 50px; text-align: center; background: radial-gradient(circle at top, rgba(125, 90, 255, 0.05), transparent); }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; padding: 0 10% 100px; }
+        
+        /* Category Filter (Biar Rame & Pro) */
+        .filter-container { display: flex; justify-content: center; gap: 15px; margin-bottom: 50px; flex-wrap: wrap; }
+        .filter-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #888; padding: 10px 20px; border-radius: 50px; cursor: pointer; transition: 0.3s; }
+        .filter-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
+
+        /* Card Styling */
+        /* Card Styling - Pastiin Default-nya Muncul */
+        .project-card { display: block; /* Pastiin kelihatan pas awal */opacity: 1;     /* Jangan nol nyet biar gak zonk */transform: scale(1);background: rgba(255,255,255,0.02); border-radius: 24px;  overflow: hidden; border: 1px solid rgba(255,255,255,0.05); transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .project-card:hover { transform: translateY(-15px); border-color: var(--accent); background: rgba(255,255,255,0.05); }
+        .project-img { width: 100%; height: 200px; background: linear-gradient(45deg, #0a0a0a, #1a1a1a); display: flex; align-items: center; justify-content: center; font-size: 4rem; color: rgba(255,255,255,0.05); }
+        .project-card:hover .project-img { color: var(--accent); }
+        .project-info { padding: 25px; }
+        .project-info h3 { margin-bottom: 8px; font-size: 1.3rem; }
+        .project-info p { font-size: 0.9rem; color: #777; margin-bottom: 15px; }
+        .tag { font-size: 0.65rem; background: rgba(125, 90, 255, 0.1); color: var(--accent); padding: 4px 12px; border-radius: 50px; display: inline-block; font-weight: 700; margin-bottom: 10px; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo-link"><div class="logo">NEX<span>GEN</span></div></a>
+        <ul class="nav-links"><li><a href="index.html">Back to Home</a></li></ul>
+    </nav>
+
+    <header class="portfolio-header reveal active">
+        <span class="tag" style="margin-bottom: 20px;">Selected Works</span>
+        <h1>Digital <span>Excellence</span></h1>
+        <p>12 Proyek unggulan yang mendefinisikan standar baru industri.</p>
+    </header>
+
+    <div class="filter-container reveal active">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="Security">Security</button>
+    </div>
+
+    <div class="portfolio-grid">
+        <div class="project-card reveal" data-category="ai">
+            <div class="project-img"><i class="fa-solid fa-gem"></i></div>
+            <div class="project-info"><span class="tag">AI System</span><h3>Luxe Analytics</h3><p>Optimasi data untuk pasar berlian eropa.</p></div>
+        </div>
+        <div class="project-card reveal" data-category="Security">
+            <div class="project-img"><i class="fa-solid fa-vault"></i></div>
+            <div class="project-info"><span class="tag">Security</span><h3>Cyber Vault</h3><p>Enkripsi data perbankan Swiss.</p></div>
+        </div>
+        <div class="project-card reveal" data-category="web">
+            <div class="project-img"><i class="fa-solid fa-rocket"></i></div>
+            <div class="project-info"><span class="tag">Web</span><h3>Orbit SaaS</h3><p>Dashboard manajemen startup unicorn.</p></div>
+        </div>
+        <div class="project-card reveal" data-category="ai">
+            <div class="project-img"><i class="fa-solid fa-brain"></i></div>
+            <div class="project-info"><span class="tag">AI</span><h3>Neural Mind</h3><p>Prediksi tren saham real-time.</p></div>
+        </div>
+        <div class="project-card reveal" data-category="web">
+            <div class="project-img"><i class="fa-solid fa-mobile-screen"></i></div>
+            <div class="project-info"><span class="tag">Web</span><h3>ZenLife App</h3><p>Platform wellness M4 optimized.</p></div>
+        </div>
+        <div class="project-card reveal" data-category="Security">
+            <div class="project-img"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="project-info"><span class="tag">Security</span><h3>Iron Gate</h3><p>Perlindungan infrastruktur IoT industri.</p></div>
+        </div>
+        <div class="project-card reveal" data-category="web">
+            <div class="project-img"><i class="fa-solid fa-chart-pie"></i></div>
+            <div class="project-info"><span class="tag">Web</span><h3>Data Flow</h3><p>Sistem visualisasi big data retail.</p></div>
+        </div>
+        <div class="project-card reveal" data-category="ai">
+            <div class="project-img"><i class="fa-solid fa-microchip"></i></div>
+            <div class="project-info"><span class="tag">AI</span><h3>Core Engine</h3><p>Automasi manufaktur berbasis visi komputer.</p></div>
+        </div>
+        <div class="project-card reveal" data-category="Security">
+            <div class="project-img"><i class="fa-solid fa-lock"></i></div>
+            <div class="project-info"><span class="tag">Security</span><h3>Phantom Sec</h3><p>Audit keamanan otomatis untuk cloud.</p></div>
+        </div>
+        <div class="project-card reveal" data-category="web">
+            <div class="project-img"><i class="fa-solid fa-cloud"></i></div>
+            <div class="project-info"><span class="tag">Web</span><h3>Sky Network</h3><p>Infrastruktur CDN global kecepatan tinggi.</p></div>
+        </div>
+        <div class="project-card reveal" data-category="ai">
+            <div class="project-img"><i class="fa-solid fa-robot"></i></div>
+            <div class="project-info"><span class="tag">AI</span><h3>Bot Master</h3><p>Customer service AI bahasa alami.</p></div>
+        </div>
+        <div class="project-card reveal" data-category="Security">
+            <div class="project-img"><i class="fa-solid fa-fingerprint"></i></div>
+            <div class="project-info"><span class="tag">Security</span><h3>Bio Pass</h3><p>Verifikasi biometrik terdesentralisasi.</p></div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col branding">
+            <div class="footer-logo">NEX<span>GEN</span></div>
+            <p>Solusi teknologi masa depan untuk pertumbuhan bisnis global Anda.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h3>Kantor Kami</h3>
+            <p>M-TEN BUILDING 11 FLOOR —<br>
+               Kuningan Barat Mampang Prapatan<br>
+               Jakarta Selatan, DKI Jakarta</p>
+            <a href="mailto:info@nexgen.co.id" class="footer-email">your.email@example.com</a>
+            <p class="footer-phone">+123456789</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="services.html">Penawaran Spesial</a></li>
+                <li><a href="portofolio.html">Portofolio</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>Dapatkan update terbaru dari kami.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn-subscribe">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>NexGen Global Solusi &copy; 2026. All rights reserved.</p>
+    </div>
+        <div class="bottom-right">
+        <a href="legal.html#privacy">Privacy Policy</a>
+        <a href="legal.html#terms">Terms of Service</a>
+        <a href="legal.html#cookies">Cookie Policy</a>
+    </div>
+
+    <a href="https://wa.me/6281138211212" class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="wa-text">Contact us on WhatsApp</span>
+</a>
+</footer>
+
+    <script>
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Ganti status active di tombol
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                
+                if (filterValue === 'all' || filterValue === cardCategory) {
+                    card.style.display = 'block';
+                    // Tambahin sedikit delay biar animasinya cakep
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    }, 1);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.8)';
+                    // Sembunyiin setelah animasi ilang
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
