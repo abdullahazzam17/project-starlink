@@ -1,0 +1,351 @@
+/* ===== STARLINK PAGE — Dark hero + light pricing ===== */
+
+/* Navbar override saat di atas hero dark */
+.dark-nav {
+    background: rgba(15, 23, 42, .4) !important;
+    border-bottom-color: transparent !important
+}
+
+.dark-nav .nav-link {
+    color: #CBD5E1
+}
+
+.dark-nav .nav-link:hover {
+    background: rgba(255, 255, 255, .08);
+    color: #fff
+}
+
+.dark-nav .logo {
+    color: #fff
+}
+
+.dark-nav.scrolled {
+    background: rgba(15, 23, 42, .85) !important;
+    backdrop-filter: saturate(180%) blur(14px)
+}
+
+/* ===== HERO DARK ===== */
+.sl-hero {
+    position: relative;
+    min-height: 760px;
+    padding: 160px 0 96px;
+    overflow: hidden;
+    color: #fff;
+    isolation: isolate;
+}
+
+.sl-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-image: url('../assets/gambar/v4_residential_5.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sl-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(to bottom, transparent 0%, rgba(2, 6, 23, .4) 100%),
+        linear-gradient(to right, rgba(2, 6, 23, .6) 0%, transparent 60%);
+}
+
+.sl-hero-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 64px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width:900px) {
+    .sl-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 48px
+    }
+}
+
+.sl-eyebrow {
+    background: rgba(34, 197, 94, .15) !important;
+    color: #86EFAC !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sl-eyebrow i {
+    width: 14px;
+    height: 14px
+}
+
+.sl-title {
+    font-size: 64px;
+    color: #fff;
+    margin-bottom: 24px
+}
+
+@media (max-width:760px) {
+    .sl-title {
+        font-size: 40px
+    }
+}
+
+.sl-sub {
+    font-size: 18px;
+    color: #CBD5E1;
+    margin-bottom: 40px;
+    max-width: 560px
+}
+
+.sl-price-block {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 32px;
+    margin-bottom: 32px;
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 24px;
+    backdrop-filter: blur(8px);
+}
+
+.sl-price-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: #94A3B8;
+}
+
+.sl-price {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    color: #fff
+}
+
+.sl-currency {
+    font-size: 20px;
+    font-weight: 600;
+    color: #86EFAC
+}
+
+.sl-amount {
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -.02em;
+    line-height: 1
+}
+
+.sl-period {
+    font-size: 16px;
+    color: #94A3B8
+}
+
+@media (max-width:760px) {
+    .sl-amount {
+        font-size: 40px
+    }
+}
+
+.btn-ghost-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    background: rgba(255, 255, 255, .08);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .15);
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-ghost-dark:hover {
+    background: rgba(255, 255, 255, .15);
+    transform: translateY(-2px)
+}
+
+.btn-ghost-dark i {
+    width: 18px;
+    height: 18px
+}
+
+/* Hero visual & CTA alignment */
+.sl-hero-text .hero-cta {
+    justify-content: flex-start;
+}
+
+
+
+/* ===== PRICING ===== */
+.sl-pricing {
+    position: relative;
+    padding: 96px 0;
+    background: #fff;
+    overflow: hidden
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 900px) {
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sl-decor-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: .5;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.sl-decor-blob.b1 {
+    width: 400px;
+    height: 400px;
+    background: rgba(34, 197, 94, .15);
+    top: -100px;
+    left: -100px
+}
+
+.sl-decor-blob.b2 {
+    width: 500px;
+    height: 500px;
+    background: rgba(14, 165, 233, .12);
+    bottom: -150px;
+    right: -150px
+}
+
+.sl-pricing .container {
+    position: relative;
+    z-index: 1
+}
+
+.price-card {
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: all .25s ease-in-out;
+}
+
+.price-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary)
+}
+
+.price-card.featured {
+    background: linear-gradient(180deg, #fff, #F0FDF4);
+    border: 2px solid var(--primary);
+    transform: scale(1.03);
+}
+
+.price-card.featured:hover {
+    transform: scale(1.03) translateY(-6px)
+}
+
+.price-flag {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 999px;
+    letter-spacing: .04em;
+    box-shadow: 0 8px 16px rgba(34, 197, 94, .3);
+}
+
+.price-tier {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--primary-600);
+}
+
+.price-amount {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--ink);
+    letter-spacing: -.02em;
+    line-height: 1;
+}
+
+.price-amount .cur {
+    font-size: 18px;
+    color: var(--muted);
+    font-weight: 600;
+    margin-right: 4px
+}
+
+.price-amount .per {
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 500;
+    margin-left: 4px
+}
+
+.price-desc {
+    font-size: 14px;
+    color: var(--muted)
+}
+
+.price-card .check-list {
+    margin-bottom: 24px;
+}
+
+/* ===== CHECK LIST STYLES ===== */
+.check-list {
+    list-style: none; /* Menghilangkan titik hitam default bawaan browser */
+    padding: 0;
+    margin: 0 0 32px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    color: var(--text-muted, #4B5563);
+    line-height: 1.5;
+}
+
+.check-list li i {
+    width: 20px;
+    height: 20px;
+    color: var(--primary, #22C55E);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.price-card .btn {
+    justify-content: center;
+    width: 100%;
+    margin-top: auto;
+}

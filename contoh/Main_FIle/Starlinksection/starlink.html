@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starlink — Triakses</title>
+    <meta name="description"
+        content="Starlink by Triakses — Internet satelit cepat dan terjangkau untuk di mana saja. Mulai dari Rp 700.000/bulan." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" href="../assets/Icon/logo.png" type="image/png" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="./starlink.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- NAVBAR (diambil dari index.html) -->
+    <header class="navbar dark-nav" id="navbar">
+        <div class="container nav-inner">
+            <a href="../index.html" class="logo">
+                <span class="logo-mark">
+                    <img src="../assets/Icon/logo.png" alt="Triakses Logo" />
+                </span>
+                <span class="logo-text">Triakses</span>
+            </a>
+
+            <nav class="nav-menu">
+                <div class="nav-item has-dropdown">
+                    <button class="nav-link">
+                        Produk <i data-lucide="chevron-down" class="chev"></i>
+                    </button>
+                    <div class="dropdown">
+                        <a href="./starlink.html"><i data-lucide="satellite"></i> Starlink</a>
+                        <a href="../index.html#showcase"><i data-lucide="server"></i> Dedicated Internet</a>
+                        <a href="../index.html#showcase"><i data-lucide="house-wifi"></i> Fiber Home</a>
+                        <a href="../index.html#services"><i data-lucide="cloud"></i> Cloud Services</a>
+                        <a href="../index.html#services"><i data-lucide="cctv"></i> CCTV</a>
+                        <a href="../index.html#services"><i data-lucide="shield-check"></i> IP VPN</a>
+                    </div>
+                </div>
+                <a href="../index.html#solusi" class="nav-link">Solusi Bisnis</a>
+                <a href="../index.html#jangkauan" class="nav-link">Cek Jangkauan</a>
+                <a href="../index.html#bantuan" class="nav-link">Bantuan</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Tombol login & order now dihilangkan sesuai request -->
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO DARK -->
+    <section class="sl-hero">
+        <div class="sl-hero-bg"></div>
+        <div class="sl-hero-overlay"></div>
+        <div class="container sl-hero-inner">
+            <div class="sl-hero-text reveal">
+                <span class="eyebrow sl-eyebrow"><i data-lucide="satellite"></i> Starlink by Triakses</span>
+                <h1 class="sl-title">Internet Cepat, <span class="grad">Di Mana Saja</span></h1>
+                <p class="sl-sub">Konektivitas satelit orbit rendah dengan latency rendah. Tanpa kabel, tanpa batas
+                    geografis — pasang sendiri dalam 15 menit.</p>
+                <div class="sl-price-block">
+                    <span class="sl-price-label">Mulai dari</span>
+                    <div class="sl-price">
+                        <span class="sl-currency">Rp</span>
+                        <span class="sl-amount">700.000</span>
+                        <span class="sl-period">/bulan</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="e-commerce _starlink/e-commerce.html" class="btn btn-primary"><i data-lucide="shopping-cart"></i> Order Sekarang</a>
+                    <a href="#pricing" class="btn btn-ghost-dark">Lihat Paket <i data-lucide="arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PRICING 3 KOTAK -->
+    <section id="pricing" class="sl-pricing">
+        <div class="sl-decor-blob b1"></div>
+        <div class="sl-decor-blob b2"></div>
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Paket Berlangganan</span>
+                <h2>Pilih Paket Sesuai Kebutuhan</h2>
+                <p>Semua paket sudah termasuk perangkat, instalasi, dan dukungan teknis 24/7.</p>
+            </div>
+            <div class="grid-3">
+                <div class="price-card reveal">
+                    <div class="price-tier">Residential</div>
+                    <div class="price-amount"><span class="cur">Rp</span>700.000<span class="per">/bln</span></div>
+                    <p class="price-desc">Untuk rumah dan keluarga di area sub-urban hingga pedesaan.</p>
+                    <ul class="check-list">
+                        <li><i data-lucide="check"></i> Hingga 100 Mbps</li>
+                        <li><i data-lucide="check"></i> Unlimited data</li>
+                        <li><i data-lucide="check"></i> Setup mandiri 15 menit</li>
+                        <li><i data-lucide="check"></i> Support 24/7</li>
+                    </ul>
+                    <a href="#order" class="btn btn-ghost">Pilih Paket</a>
+                </div>
+                <div class="price-card featured reveal">
+                    <div class="price-flag">Paling Populer</div>
+                    <div class="price-tier">Business</div>
+                    <div class="price-amount"><span class="cur">Rp</span>1.500.000<span class="per">/bln</span></div>
+                    <p class="price-desc">Untuk UKM, kantor cabang, dan lokasi remote yang butuh koneksi stabil.</p>
+                    <ul class="check-list">
+                        <li><i data-lucide="check"></i> Hingga 220 Mbps</li>
+                        <li><i data-lucide="check"></i> Prioritas jaringan</li>
+                        <li><i data-lucide="check"></i> IP publik tersedia</li>
+                        <li><i data-lucide="check"></i> SLA 99% + NOC monitoring</li>
+                    </ul>
+                    <a href="#order" class="btn btn-primary">Pilih Paket</a>
+                </div>
+                <div class="price-card reveal">
+                    <div class="price-tier">Mobility</div>
+                    <div class="price-amount"><span class="cur">Rp</span>2.400.000<span class="per">/bln</span></div>
+                    <p class="price-desc">Untuk kendaraan, kapal, dan operasional yang berpindah lokasi.</p>
+                    <ul class="check-list">
+                        <li><i data-lucide="check"></i> Hingga 250 Mbps in-motion</li>
+                        <li><i data-lucide="check"></i> Cakupan global</li>
+                        <li><i data-lucide="check"></i> Antena ruggedized</li>
+                        <li><i data-lucide="check"></i> Roaming aktif</li>
+                    </ul>
+                    <a href="#order" class="btn btn-ghost">Pilih Paket</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES ZIG-ZAG -->
+    <section class="showcase" id="showcase">
+        <div class="container">
+            <div class="zigzag reveal">
+                <div class="zigzag-text">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                        <i data-lucide="gauge" style="width: 28px; height: 28px; color: var(--text);"></i>
+                        <span class="badge badge-indigo" style="margin: 0;">Performa</span>
+                    </div>
+                    <h2>Latency Rendah, Kecepatan Tinggi</h2>
+                    <p>Konstelasi satelit di orbit rendah (LEO) memberikan latency 20-40ms, setara dengan koneksi fiber di
+                        kota besar.</p>
+                    <ul class="check-list">
+                        <li><i data-lucide="check"></i> Download hingga 250 Mbps</li>
+                        <li><i data-lucide="check"></i> Upload hingga 25 Mbps</li>
+                        <li><i data-lucide="check"></i> Latency 20-40ms</li>
+                    </ul>
+                    <a href="#pricing" class="btn btn-primary">Lihat Paket</a>
+                </div>
+                <div class="zigzag-visual">
+                    <div class="zigzag-img-wrap">
+                        <img src="../assets/gambar/Latenci.webp" alt="Performa Latency Rendah" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="zigzag reverse reveal">
+                <div class="zigzag-visual">
+                    <div class="zigzag-img-wrap">
+                        <img src="../assets/gambar/easy_instalation.webp" alt="Cakupan Seluruh Indonesia" />
+                    </div>
+                </div>
+                <div class="zigzag-text">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                        <i data-lucide="map-pin" style="width: 28px; height: 28px; color: var(--text);"></i>
+                        <span class="badge badge-rose" style="margin: 0;">Cakupan</span>
+                    </div>
+                    <h2>Jangkau Lokasi Tanpa Sinyal</h2>
+                    <p>Dari pulau terpencil hingga area pegunungan, Starlink bekerja di mana saja selama langit terlihat.
+                        Tidak butuh tower BTS.</p>
+                    <ul class="check-list">
+                        <li><i data-lucide="check"></i> Cakupan 100% wilayah Indonesia</li>
+                        <li><i data-lucide="check"></i> Bebas dari blackspot</li>
+                        <li><i data-lucide="check"></i> Cocok untuk maritim & tambang</li>
+                    </ul>
+                    <a href="#pricing" class="btn btn-primary">Cek Lokasi Saya</a>
+                </div>
+            </div>
+
+            <div class="zigzag reveal">
+                <div class="zigzag-text">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                        <i data-lucide="wrench" style="width: 28px; height: 28px; color: var(--text);"></i>
+                        <span class="badge badge-amber" style="margin: 0;">Instalasi</span>
+                    </div>
+                    <h2>Pasang Sendiri Dalam 15 Menit</h2>
+                    <p>Cukup keluarkan dish dari box, hubungkan ke listrik, arahkan ke langit terbuka. Aplikasi Starlink
+                        akan memandu Anda.</p>
+                    <ul class="check-list">
+                        <li><i data-lucide="check"></i> Tidak perlu teknisi</li>
+                        <li><i data-lucide="check"></i> Aplikasi pemandu visual</li>
+                        <li><i data-lucide="check"></i> WiFi langsung aktif</li>
+                    </ul>
+                    <a href="#order" class="btn btn-primary">Order Sekarang</a>
+                </div>
+                <div class="zigzag-visual">
+                    <div class="zigzag-img-wrap">
+                        <img src="../assets/gambar/Mudah_pasang.webp" alt="Instalasi Mudah" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORDER CTA -->
+    <section id="order" style="padding: 160px 0 120px; text-align: left;">
+        <div class="container reveal">
+            <h2 style="font-size: 40px; margin-bottom: 16px; max-width: 600px; line-height: 1.2;">Siap pasang Starlink di lokasi Anda?</h2>
+            <p class="body-normal" style="margin-bottom: 48px; max-width: 600px;">Tim kami siap membantu cek ketersediaan dan proses order dalam 1x24 jam.</p>
+            <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <a href="#" class="btn btn-primary btn-lg"><i data-lucide="phone"></i> Hubungi Sales</a>
+                <a href="../index.html" class="btn btn-ghost btn-lg">Kembali ke Beranda <i data-lucide="arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo">
+                    <span class="logo-mark">
+                        <img src="../assets/Icon/logo.png" alt="Triakses Logo" />
+                    </span>
+                    <span class="logo-text">Triakses</span>
+                </a>
+                <p>© 2026 Triakses. Konektivitas untuk semua.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

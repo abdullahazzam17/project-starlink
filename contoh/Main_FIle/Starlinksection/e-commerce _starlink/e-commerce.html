@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katalog Produk Starlink — Triakses</title>
+    <meta name="description"
+        content="Beli perangkat dan paket Starlink resmi dari Triakses. Tersedia dish, router, aksesori, dan paket langganan untuk rumah, bisnis, dan maritim." />
+    <link rel="icon" href="../../assets/Icon/logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="./e-commerce.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- ===== TOPBAR NAVBAR ===== -->
+    <header class="shop-nav" id="shopNav">
+        <div class="shop-nav-inner">
+            <!-- Logo -->
+            <a href="../../index.html" class="logo">
+                <span class="logo-mark"><img src="../../assets/Icon/logo.png" alt="Triakses" /></span>
+                <span class="logo-text">Triakses</span>
+            </a>
+
+            <!-- Back to Starlink -->
+            <a href="../starlink.html" class="back-link">
+                <i data-lucide="arrow-left"></i> Kembali ke Starlink
+            </a>
+
+            <!-- Cart -->
+            <button class="cart-btn" id="cartBtn" onclick="toggleCart()">
+                <i data-lucide="shopping-bag"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== CART SIDEBAR ===== -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Keranjang Belanja</h3>
+            <button onclick="toggleCart()"><i data-lucide="x"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <i data-lucide="shopping-bag"></i>
+                <p>Keranjang masih kosong</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display:none;">
+            <div class="cart-total">
+                <span>Total</span>
+                <strong id="cartTotal">Rp 0</strong>
+            </div>
+            <button class="btn btn-primary btn-lg" style="width:100%; justify-content:center;">
+                <i data-lucide="credit-card"></i> Checkout
+            </button>
+        </div>
+    </aside>
+
+    <!-- ===== SECTION 1: PERANGKAT UTAMA (HARDWARE) ===== -->
+    <section class="shop-section" id="hardware">
+        <div class="container">
+            <div class="shop-section-head reveal">
+                <div class="section-label">
+                    <div>
+                        <h2>Hardware & Perangkat Utama</h2>
+                        <p>Pilih tipe perangkat dan paket layanan Anda</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-grid">
+
+                <!-- Card 1: Standard / Mini Kit -->
+                <article class="product-card reveal" id="kit-residential">
+                    <div class="product-img">
+                        <img src="../../assets/gambar/v4_residential_5.webp" alt="Starlink Kit" />
+                        <span class="product-badge">Terpopuler</span>
+                    </div>
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label>Ukuran Perangkat:</label>
+                            <div class="option-chips" data-target="kit-residential" data-option="size">
+                                <button class="chip active" data-val="standard"
+                                    onclick="updateHardwareCard('kit-residential')">Standar</button>
+                                <button class="chip" data-val="mini"
+                                    onclick="updateHardwareCard('kit-residential')">Mini</button>
+                            </div>
+                        </div>
+                        <div class="option-group">
+                            <label>Paket Layanan:</label>
+                            <div class="option-chips" data-target="kit-residential" data-option="plan">
+                                <button class="chip active" data-val="residential"
+                                    onclick="updateHardwareCard('kit-residential')">Residential</button>
+                                <button class="chip" data-val="lite"
+                                    onclick="updateHardwareCard('kit-residential')">Res. Lite</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Starlink Kit — Residential</h4>
+                        <p class="product-desc">Koneksi internet tanpa batas untuk rumah dan kantor kecil.</p>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-main" id="price-kit-residential">Rp 7.800.000</span>
+                            </div>
+                            <button class="btn-add" onclick="addHardwareToCart('kit-residential')">
+                                <i data-lucide="shopping-bag"></i> Beli
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2: Enterprise Kit -->
+                <article class="product-card reveal" id="kit-enterprise">
+                    <div class="product-img">
+                        <img src="../../assets/gambar/v4_residential_5.webp" alt="Starlink Enterprise" />
+                    </div>
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label>Ukuran Perangkat:</label>
+                            <div class="option-chips" data-target="kit-enterprise" data-option="size">
+                                <button class="chip active" data-val="standard"
+                                    onclick="updateHardwareCard('kit-enterprise')">Standar</button>
+                                <button class="chip" data-val="mini"
+                                    onclick="updateHardwareCard('kit-enterprise')">Mini</button>
+                            </div>
+                        </div>
+                        <div class="option-group">
+                            <label>Paket Layanan:</label>
+                            <div class="option-chips" data-target="kit-enterprise" data-option="plan">
+                                <button class="chip active" data-val="residential"
+                                    onclick="updateHardwareCard('kit-enterprise')">Residential</button>
+                                <button class="chip" data-val="lite" onclick="updateHardwareCard('kit-enterprise')">Res.
+                                    Lite</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Starlink Enterprise Kit</h4>
+                        <p class="product-desc">Dirancang untuk bisnis dengan kebutuhan bandwidth tinggi & prioritas.
+                        </p>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-main" id="price-kit-enterprise">Rp 28.500.000</span>
+                            </div>
+                            <button class="btn-add" onclick="addHardwareToCart('kit-enterprise')">
+                                <i data-lucide="shopping-bag"></i> Beli
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3: Mobility Kit -->
+                <article class="product-card reveal" id="kit-mobility">
+                    <div class="product-img">
+                        <img src="../../assets/gambar/v4_residential_5.webp" alt="Starlink Mobility" />
+                    </div>
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label>Ukuran Perangkat:</label>
+                            <div class="option-chips" data-target="kit-mobility" data-option="size">
+                                <button class="chip active" data-val="standard"
+                                    onclick="updateHardwareCard('kit-mobility')">Standar</button>
+                                <button class="chip" data-val="mini"
+                                    onclick="updateHardwareCard('kit-mobility')">Mini</button>
+                            </div>
+                        </div>
+                        <div class="option-group">
+                            <label>Paket Layanan:</label>
+                            <div class="option-chips" data-target="kit-mobility" data-option="plan">
+                                <button class="chip active" data-val="residential"
+                                    onclick="updateHardwareCard('kit-mobility')">Residential</button>
+                                <button class="chip" data-val="lite" onclick="updateHardwareCard('kit-mobility')">Res.
+                                    Lite</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Starlink Mobility Kit</h4>
+                        <p class="product-desc">Ideal untuk kendaraan RV atau mobile office yang sering berpindah.</p>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-main" id="price-kit-mobility">Rp 32.000.000</span>
+                            </div>
+                            <button class="btn-add" onclick="addHardwareToCart('kit-mobility')">
+                                <i data-lucide="shopping-bag"></i> Beli
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4: Maritime Kit -->
+                <article class="product-card reveal" id="kit-maritime">
+                    <div class="product-img">
+                        <img src="../../assets/gambar/v4_residential_5.webp" alt="Starlink Maritime" />
+                        <span class="product-badge" style="background:#6366F1;">Premium</span>
+                    </div>
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label>Ukuran Perangkat:</label>
+                            <div class="option-chips" data-target="kit-maritime" data-option="size">
+                                <button class="chip active" data-val="standard"
+                                    onclick="updateHardwareCard('kit-maritime')">Standar</button>
+                                <button class="chip" data-val="mini"
+                                    onclick="updateHardwareCard('kit-maritime')">Mini</button>
+                            </div>
+                        </div>
+                        <div class="option-group">
+                            <label>Paket Layanan:</label>
+                            <div class="option-chips" data-target="kit-maritime" data-option="plan">
+                                <button class="chip active" data-val="residential"
+                                    onclick="updateHardwareCard('kit-maritime')">Residential</button>
+                                <button class="chip" data-val="lite" onclick="updateHardwareCard('kit-maritime')">Res.
+                                    Lite</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Starlink Maritime Kit</h4>
+                        <p class="product-desc">Solusi internet laut untuk kapal pesiar, yacht, dan kapal kargo.</p>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-main" id="price-kit-maritime">Rp 95.000.000</span>
+                            </div>
+                            <button class="btn-add" onclick="addHardwareToCart('kit-maritime')">
+                                <i data-lucide="shopping-bag"></i> Beli
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 2: AKSESORIS (6 CARDS) ===== -->
+    <section class="shop-section shop-section--alt" id="aksesoris">
+        <div class="container">
+            <div class="shop-section-head reveal">
+                <div class="section-label">
+                    <div>
+                        <h2>Aksesori Pendukung</h2>
+                        <p>Lengkapi instalasi Anda dengan aksesori resmi Starlink</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-grid">
+                <!-- Accessory 1 -->
+                <article class="product-card reveal">
+                    <div class="product-img"><img src="../../assets/gambar/v4_residential_5.webp" alt="Router Gen 3" />
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Network</span>
+                        <h4>Standard Pivot Mount</h4>
+                        <p class="product-desc">Router tambahan untuk jangkauan lebih luas di gedung besar.</p>
+                        <div class="product-footer">
+                            <div class="product-price"><span class="price-main">Rp 960.000</span></div>
+                            <button class="btn-add" onclick="addToCart('Router WiFi 6 Gen 3', 2100000)">
+                                <i data-lucide="shopping-bag"></i> Beli
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <!-- Accessory 2 -->
+                <article class="product-card reveal">
+                    <div class="product-img"><img src="../../assets/gambar/v4_residential_5.webp" alt="Mesh Node" />
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Network</span>
+                        <h4>Standard Wall Mount</h4>
+                        <p class="product-desc">Perluas WiFi ke seluruh ruangan tanpa tarik kabel tambahan.</p>
+                        <div class="product-footer">
+                            <div class="product-price"><span class="price-main">Rp 1.120.000</span></div>
+                            <button class="btn-add" onclick="addToCart('Starlink Mesh Node', 1500000)">
+                                <i data-lucide="shopping-bag"></i> Beli
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <!-- Accessory 3 -->
+                <article class="product-card reveal">
+                    <div class="product-img"><img src="../../assets/gambar/v4_residential_5.webp"
+                            alt="Ethernet Adapter" /></div>
+                    <div class="product-info">
+                        <span class="product-cat">Connector</span>
+                        <h4>Standard Mobility Mount</h4>
+                        <p class="product-desc">Hubungkan Starlink langsung ke router atau switch pihak ketiga.</p>
+                        <div class="product-footer">
+                            <div class="product-price"><span class="price-main">Rp 800.000</span></div>
+                            <button class="btn-add" onclick="addToCart('Ethernet Adapter', 850000)">
+                                <i data-lucide="shopping-bag"></i> Beli
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <!-- Accessory 4 -->
+                <article class="product-card reveal">
+                    <div class="product-img"><img src="../../assets/gambar/v4_residential_5.webp" alt="Pipe Adapter" />
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Mount</span>
+                        <h4>Flat High Pipe Adapter</h4>
+                        <p class="product-desc">Dudukan tiang untuk pemasangan dish di tempat yang tinggi.</p>
+                        <div class="product-footer">
+                            <div class="product-price"><span class="price-main">Rp 2.080.000</span></div>
+                            <button class="btn-add" onclick="addToCart('Pipe Adapter Mount', 450000)">
+                                <i data-lucide="shopping-bag"></i> Beli
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <!-- Accessory 5 -->
+                <article class="product-card reveal">
+                    <div class="product-img"><img src="../../assets/gambar/v4_residential_5.webp" alt="Wall Mount" />
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Mount</span>
+                        <h4>Gen 3 Router Mount</h4>
+                        <p class="product-desc">Pemasangan dish pada dinding luar bangunan dengan jarak aman.</p>
+                        <div class="product-footer">
+                            <div class="product-price"><span class="price-main">Rp 1.120.000</span></div>
+                            <button class="btn-add" onclick="addToCart('Long Wall Mount', 1200000)">
+                                <i data-lucide="shopping-bag"></i> Beli
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <!-- Accessory 6 -->
+                <article class="product-card reveal">
+                    <div class="product-img"><img src="../../assets/gambar/v4_residential_5.webp"
+                            alt="Starlink Cable" /></div>
+                    <div class="product-info">
+                        <span class="product-cat">Cable</span>
+                        <h4>Third Party Router</h4>
+                        <p class="product-desc">Kabel pengganti atau cadangan untuk menghubungkan dish ke router.</p>
+                        <div class="product-footer">
+                            <div class="product-price"><span class="price-main">Rp 2.080.000</span></div>
+                            <button class="btn-add" onclick="addToCart('Kabel Starlink 15m', 1100000)">
+                                <i data-lucide="shopping-bag"></i> Beli
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 3: LOCAL PRIORITY ===== -->
+    <section class="shop-section" id="local-priority">
+        <div class="container">
+            <div class="shop-section-head reveal">
+                <div class="section-label">
+                    <div>
+                        <h2>Local Priority Data</h2>
+                        <p>Koneksi prioritas untuk kebutuhan domestik Indonesia</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-grid">
+                <!-- Service 1 -->
+                <div class="service-card reveal">
+                    <div class="service-header">
+                        <h4>Priority 50GB</h4>
+                        <span class="service-badge">Local</span>
+                    </div>
+                    <div class="service-price">Rp 647rb<span>/bln</span></div>
+                    <ul class="service-features">
+                        <li><i data-lucide="check-circle"></i> High Priority</li>
+                        <li><i data-lucide="check-circle"></i> Low Latency</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="addToCart('Local Priority 50GB', 647000)">
+                        <i data-lucide="plus"></i> Tambah
+                    </button>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card reveal">
+                    <div class="service-header">
+                        <h4>Priority 500GB</h4>
+                        <span class="service-badge">Local</span>
+                    </div>
+                    <div class="service-price">Rp 1.64jt<span>/bln</span></div>
+                    <ul class="service-features">
+                        <li><i data-lucide="check-circle"></i> High Priority</li>
+                        <li><i data-lucide="check-circle"></i> Public IP</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="addToCart('Local Priority 500GB', 1643000)">
+                        <i data-lucide="plus"></i> Tambah
+                    </button>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card reveal">
+                    <div class="service-header">
+                        <h4>Priority 1TB</h4>
+                        <span class="service-badge">Enterprise</span>
+                    </div>
+                    <div class="service-price">Rp 2.88jt<span>/bln</span></div>
+                    <ul class="service-features">
+                        <li><i data-lucide="check-circle"></i> Business Priority</li>
+                        <li><i data-lucide="check-circle"></i> 24/7 Support</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="addToCart('Local Priority 1TB', 2888000)">
+                        <i data-lucide="plus"></i> Tambah
+                    </button>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card reveal">
+                    <div class="service-header">
+                        <h4>Priority 2TB</h4>
+                        <span class="service-badge">Max</span>
+                    </div>
+                    <div class="service-price">Rp 5.37jt<span>/bln</span></div>
+                    <ul class="service-features">
+                        <li><i data-lucide="check-circle"></i> Max Priority</li>
+                        <li><i data-lucide="check-circle"></i> Dedicated IP</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="addToCart('Local Priority 2TB', 5378000)">
+                        <i data-lucide="plus"></i> Tambah
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 4: GLOBAL PRIORITY ===== -->
+    <section class="shop-section shop-section--alt" id="global-priority">
+        <div class="container">
+            <div class="shop-section-head reveal">
+                <div class="section-label">
+                    <div>
+                        <h2>Global Priority Data</h2>
+                        <p>Koneksi tanpa batas di mana pun Anda berada di dunia</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-grid">
+                <!-- Service 5 -->
+                <div class="service-card reveal">
+                    <div class="service-header">
+                        <h4>Global 50GB</h4>
+                        <span class="service-badge">Mobile</span>
+                    </div>
+                    <div class="service-price">Rp 4.48jt<span>/bln</span></div>
+                    <ul class="service-features">
+                        <li><i data-lucide="check-circle"></i> Global Roaming</li>
+                        <li><i data-lucide="check-circle"></i> Use on Sea</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="addToCart('Global Priority 50GB', 4300000)">
+                        <i data-lucide="plus"></i> Tambah
+                    </button>
+                </div>
+                <!-- Service 6 -->
+                <div class="service-card reveal">
+                    <div class="service-header">
+                        <h4>Global 500GB</h4>
+                        <span class="service-badge">Enterprise</span>
+                    </div>
+                    <div class="service-price">Rp 11.65jt<span>/bln</span></div>
+                    <ul class="service-features">
+                        <li><i data-lucide="check-circle"></i> High Capacity</li>
+                        <li><i data-lucide="check-circle"></i> Maritime Pro</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="addToCart('Global Priority 1TB', 15000000)">
+                        <i data-lucide="plus"></i> Tambah
+                    </button>
+                </div>
+                <!-- Service 7 -->
+                <div class="service-card reveal">
+                    <div class="service-header">
+                        <h4>Global 1TB</h4>
+                        <span class="service-badge">Max</span>
+                    </div>
+                    <div class="service-price">Rp 20.60jt<span>/bln</span></div>
+                    <ul class="service-features">
+                        <li><i data-lucide="check-circle"></i> Max Global</li>
+                        <li><i data-lucide="check-circle"></i> Fleet Control</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="addToCart('Global Priority 5TB', 70000000)">
+                        <i data-lucide="plus"></i> Tambah
+                    </button>
+                </div>
+                <!-- Service 8 -->
+                <div class="service-card reveal">
+                    <div class="service-header">
+                        <h4>Global 2TB</h4>
+                        <span class="service-badge">Ultra</span>
+                    </div>
+                    <div class="service-price">Rp 38.51jt<span>/bln</span></div>
+                    <ul class="service-features">
+                        <li><i data-lucide="check-circle"></i> Ultra Capacity</li>
+                        <li><i data-lucide="check-circle"></i> Dedicated Bandwidth</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="addToCart('Global Priority 10TB', 135000000)">
+                        <i data-lucide="plus"></i> Tambah
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-mark"><img src="../../assets/Icon/logo.png" alt="Triakses Logo" /></span>
+                    <span class="logo-text">Triakses</span>
+                </a>
+                <p class="body-normal">Distributor Resmi Starlink Indonesia.</p>
+            </div>
+            <div class="footer-cols">
+                <div>
+                    <h5>Produk</h5>
+                    <a href="#hardware">Hardware Utama</a>
+                    <a href="#aksesoris">Aksesori Resmi</a>
+                    <a href="#priority">Priority Data</a>
+                </div>
+                <div>
+                    <h5>Navigasi</h5>
+                    <a href="../starlink.html">Halaman Starlink</a>
+                    <a href="../../index.html">Beranda Triakses</a>
+                </div>
+                <div>
+                    <h5>Bantuan</h5>
+                    <a href="#">Hubungi Sales</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>© 2026 Triakses. All rights reserved.</span>
+            <span>Made with care in Indonesia 🇮🇩</span>
+        </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+    <script src="./e-commerce.js"></script>
+
+</body>
+
+</html>
